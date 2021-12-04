@@ -1,0 +1,59 @@
+<%- css(page.css_name) %>
+  <%- partial('_partial/banner') %>
+    <div class="content_body" id="article">
+      <%= page.con.length %>
+        <% if (page.con && page.con.length){ %>
+          <% page.con.forEach(function(recruit_con, i){ %>
+            <div class="content_recruit">
+              <div class="recruit_title">
+                <h3>
+                  <%= recruit_con.title %>
+                </h3>
+              </div>
+              <div class="recruit_Con">
+                <div class="recruit_Con_left">
+                  <div>
+                    <h4>岗位职责:</h4>
+                    <% if (recruit_con.job_respon && recruit_con.job_respon.length){ %>
+                      <% recruit_con.job_respon.forEach(function(info, i){ %>
+                        <p>
+                          <%= info %>
+                        </p>
+                        <% }) %>
+                          <% } %>
+                  </div>
+                  <div class="con_top">
+                    <h4>基本要求:</h4>
+                    <% if (recruit_con.base_require && recruit_con.base_require.length){ %>
+                      <% recruit_con.base_require.forEach(function(info, i){ %>
+                        <p>
+                          <%= info %>
+                        </p>
+                        <% }) %>
+                          <% } %>
+                  </div>
+                  <div class="con_top">
+                    <h4>加分项:</h4>
+                    <% if (recruit_con.add_points && recruit_con.add_points.length){ %>
+                      <% recruit_con.add_points.forEach(function(info, i){ %>
+                        <p>
+                          <%= info %>
+                        </p>
+                        <% }) %>
+                          <% } %>
+                  </div>
+                  <div class="con_top">
+                    <h4>工作地点:</h4>
+                    <p>
+                      <%= recruit_con.office_location %>
+                    </p>
+                  </div>
+                </div>
+                <div class="recruit_Con_img">
+                  <img src="<%- full_url_for(recruit_con.img_url)%>">
+                </div>
+              </div>
+            </div>
+            <% }) %>
+              <% } %>
+    </div>

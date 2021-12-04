@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%- theme.title %>
+  </title>
+  <meta charset="utf-8">
+
+  <!-- 引入配置文件 -->
+  <%- css('css/main.css') %>
+    <%- css('css/layout.css') %>
+      <%- css('css/reset.css') %>
+</head>
+
+<body>
+
+  <!-- 引入导航 -->
+  <!-- <nav>
+      <%- include('nav.ejs') %>
+    </nav> -->
+
+  <!-- 引入 js 文件 -->
+  <%- js('js/main.js') %>
+
+    <div class="main" id="main">
+      <div class="header_box">
+        <div class="header">
+          <div class="header_left">
+            <img src="<%- full_url_for('/images/daztenLord.png')%>"
+              onclick="window.location.href='<%- url_for(theme.menu.Home) %>'">
+          </div>
+          <div class="header_right">
+            <div class="div_hover">
+              <p onclick="window.location.href='<%- url_for(theme.menu.Docs) %>'">
+                <%= __('docs') %>
+              </p>
+            </div>
+            <div class="div_hover">
+              <p onclick="window.location.href='<%- url_for(theme.menu.Join) %>'">JOIN US</p>
+            </div>
+            <div>
+              <p>EN</p>
+              <img src="<%- full_url_for('/images/drop-down.png')%>"
+                style="width: 15px; height: 10px;margin-left: 10px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 引入正文 -->
+      <div class="content" id="content">
+        <%- body %>
+      </div>
+      <div class="footer_box">
+        <div class="footer">
+          <div class="footer_img">
+            <img src="<%- full_url_for('/images/logo_Dark.png')%>">
+          </div>
+          <div class="footer_icon">
+            <img src="<%- full_url_for('/images/icon1.png')%>">
+            <img src="<%- full_url_for('/images/icon2.png')%>">
+            <img src="<%- full_url_for('/images/icon3.png')%>">
+            <img src="<%- full_url_for('/images/icon4.png')%>">
+            <img src="<%- full_url_for('/images/icon5.png')%>">
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>

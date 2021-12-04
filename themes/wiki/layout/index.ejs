@@ -1,0 +1,32 @@
+<%- css('css/index.css') %>
+  <%- partial('_partial/banner') %>
+    <div class="content_body">
+      <div class="content_box">
+        <div class="content_img">
+          <img src="<%- full_url_for('/images/cloud.png')%>" />
+        </div>
+        <p class="content_box_title">跨云服务</p>
+        <p class="content_box_con">使用S3存储协议实现跨云存储</p>
+      </div>
+      <div class="content_box">
+        <div class="content_img">
+          <img src="<%- full_url_for('/images/cache.png')%>" />
+        </div>
+        <p class="content_box_title">高性能缓存</p>
+        <p class="content_box_con">使用内存对热点数据实现高速缓存</p>
+      </div>
+      <div class="content_box">
+        <div class="content_img">
+          <img src="<%- full_url_for('/images/network.png')%>" />
+        </div>
+        <p class="content_box_title">高速网络</p>
+        <p class="content_box_con">使用RMDA增加网络吞吐降低网络延迟</p>
+      </div>
+      <div class="content_box">
+        <div class="content_img">
+          <img src="<%- full_url_for('/images/store.png')%>" />
+        </div>
+        <p class="content_box_title">分布式存储</p>
+        <p class="content_box_con">使用EPaxos协议保证跨节点数据一致性</p>
+      </div>
+    </div>
